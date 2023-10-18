@@ -1,0 +1,8 @@
+---
+- name: Transfer course materials
+  hosts: localhost
+  gather_facts: true
+
+  roles:
+    - role: geospatial
+...

@@ -1,0 +1,14 @@
+---
+- name: Copy course notebooks to user's scratch directories
+  block:
+    - name: Get homedir
+      register: homedir
+      find:
+        paths: ['/home']
+        file_type: directory
+
+    - name: Place notebook folder in user's home directories.
+      copy:
+        src: notebooks/
+        dest: "{{item['path']}}/scratch/
+      with_items: "{{ homedir['files'] }}"
