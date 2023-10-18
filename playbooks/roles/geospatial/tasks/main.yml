@@ -10,5 +10,5 @@
     - name: Place notebook folder in user's home directories.
       copy:
         src: notebooks/
-        dest: "{{item['path']}}/scratch/
+        dest: "{{item['path']}}/scratch/"
       with_items: "{{ homedir['files'] }}"
