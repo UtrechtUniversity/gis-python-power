@@ -7,8 +7,28 @@
         paths: ['/home']
         file_type: directory
 
-    - name: Place notebook folder in user's home directories.
+    - name: Create a directory if it does not exist
+      ansible.builtin.file:
+        path: "{{item['path']}}/scratch/notebooks/"
+        state: directory
+        mode: '0777'
+      with_items: "{{ homedir['files'] }}"
+
+    - name: Create a directory if it does not exist
+      ansible.builtin.file:
+        path: "{{item['path']}}/scratch/data/input_data"
+        state: directory
+        mode: '0777'
+      with_items: "{{ homedir['files'] }}"
+      
+    - name: Place notebook folder in scratch directory.
       copy:
         src: notebooks/
-        dest: "{{item['path']}}/scratch/"
+        dest: "{{item['path']}}/scratch/notebooks/"
+      with_items: "{{ homedir['files'] }}"
+      
+    - name: Place data folder in scratch directory.
+      copy:
+        src: data/input_data/
+        dest: "{{item['path']}}/scratch/data/input_data/"
       with_items: "{{ homedir['files'] }}"
