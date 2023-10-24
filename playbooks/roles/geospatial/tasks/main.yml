@@ -29,6 +29,6 @@
       
     - name: Place data folder in scratch directory.
       copy:
-        src: data/input_data
+        src: data/input_data/
         dest: "{{item['path']}}/scratch/data/input_data/"
       with_items: "{{ homedir['files'] }}"
