@@ -22,6 +22,9 @@ miniconda:
   - rioxarray>=0.7.0
   - earthpy>=0.9.4
   - pandas
+  - shapely
+  - fiona
+  - contextily
   - ipykernel
   - pip
   - pip:
