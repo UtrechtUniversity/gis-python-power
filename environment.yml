@@ -25,6 +25,7 @@ miniconda:
   - shapely
   - fiona
   - contextily
+  - ipympl
   - ipykernel
   - pip
   - pip:
