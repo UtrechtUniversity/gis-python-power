@@ -1,6 +1,6 @@
 # Power of Python in GIS
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.11202763.svg)](https://doi.org/10.5281/zenodo.11202763)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.11203958.svg)](https://doi.org/10.5281/zenodo.11203958)
 
 This repository contains material for a short workshop demonstrating the power of Python for GIS and Geosciences. The workshop makes use of Jupyter Notebooks to perform raster and vector operations, as well as visualization of geospatial data, using Python. 
 
