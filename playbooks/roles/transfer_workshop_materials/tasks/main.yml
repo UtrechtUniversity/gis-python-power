@@ -1,6 +1,10 @@
 ---
 - name: Copy course notebooks to user's scratch directories
   block:
+    - name: Update the repository cache and install unzip
+      ansible.builtin.apt:
+        name: unzip
+        update_cache: yes
     - name: Copy and unzip course materials
       ansible.builtin.unarchive:
         src: workshop_materials.zip
