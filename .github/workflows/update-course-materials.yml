@@ -10,9 +10,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
       with:
-        ref: ${{ github.head_ref }}
+        persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal access token.
         fetch-depth: 0
     - name: Zip Course materials 
       run: |
@@ -26,12 +26,11 @@ jobs:
       run: |
         git config --local user.email "github@uu.nl"
         git config --local user.name "GitHub Utrecht University"
-        git add .
         git commit -a -m "Update course materials"
       continue-on-error: true
     - name: Push changes
       uses: ad-m/github-push-action@master
       with:
-        branch: ${{ github.head_ref }} 
         github_token: ${{ secrets.GITHUB_TOKEN }}
+        branch: ${{ github.ref }}
       continue-on-error: true
