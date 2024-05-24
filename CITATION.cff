@@ -1,0 +1,46 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: Power of Python in GIS
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
+authors:
+  - given-names: 'Jelle '
+    family-names: Treep
+    affiliation: Utrecht University
+    orcid: 'https://orcid.org/0000-0003-3196-7954'
+  - given-names: 'Garrett '
+    family-names: Speed
+    affiliation: Utrecht University
+    orcid: 'https://orcid.org/0000-0002-6074-9684'
+  - given-names: Aristoteles
+    family-names: Kandylas
+    affiliation: Utrecht University
+    orcid: 'https://orcid.org/0009-0003-4818-9607'
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.10034381.
+    description: Zenodo Publication of Workshop Material
+repository-code: 'https://github.com/UtrechtUniversity/gis-python-power'
+repository: >-
+  https://github.com/UtrechtUniversity/src-jupyter-workshop-template
+abstract: >-
+  This repository contains material for a short workshop
+  demonstrating the power of Python for GIS and Geosciences.
+  The workshop makes use of Jupyter Notebooks and Surf
+  Research Cloud Infrastructure to perform raster and vector
+  operations, as well as visualization of geospatial data,
+  using Python.
+keywords:
+  - python
+  - ansible
+  - jupyter
+  - gis
+  - utrecht-university
+  - surf research cloud
+license: MIT
+version: v1.1.0
+date-released: '2024-05-16'
